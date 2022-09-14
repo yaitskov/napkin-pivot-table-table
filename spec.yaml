@@ -1,0 +1,15 @@
+sql_folder: sql
+backend: BigQuery
+db_url: bigquery://bigquery.googleapis.com/soostone-devel-1?dataset=pivot
+parser_dialect: napkin.bigquery
+tables:
+  # pivotme_copy:
+  #   create_action:
+  #     sql_file:
+  #       source: 1.sql
+  # parser_dialect: raw
+  pivoted_pivotme5:
+    create_action:
+      sql_file:
+        #parser_dialect: raw
+        source: p4.sql
